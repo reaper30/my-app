@@ -21,12 +21,24 @@ const CounterList = () => {
     setCounters(initialState)
   }
 
-  const handleIncrement = () => { 
-    console.log(counters);
+  const handleIncrement = (_id) => { 
+    const incrCount = counters.map(count => {
+      if (count.id === _id) {
+        count.value += 1
+      }
+      return count
+    })
+    setCounters(incrCount)
   }
 
-  const handleDecrement = () => {
-    // console.log('handle Decrement');
+  const handleDecrement = (_id) => {
+    const decrCount =  counters.map(count => {
+      if(count.id === _id) {
+        count.value -= 1
+      }
+      return count
+    })
+    setCounters(decrCount)
   }
 
   return (
