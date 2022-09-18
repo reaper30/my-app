@@ -31,9 +31,9 @@ const CounterList = () => {
     setCounters(incrCount)
   }
 
-  const handleDecrement = (_id) => {
+  const handleDecrement = (id) => {
     const decrCount =  counters.map(count => {
-      if(count.id === _id) {
+      if(count.id === id) {
         count.value -= 1
       }
       return count
