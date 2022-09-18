@@ -21,9 +21,9 @@ const CounterList = () => {
     setCounters(initialState)
   }
 
-  const handleIncrement = (_id) => { 
+  const handleIncrement = (id) => { 
     const incrCount = counters.map(count => {
-      if (count.id === _id) {
+      if (count.id === id) {
         count.value += 1
       }
       return count
